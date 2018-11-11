@@ -9,7 +9,7 @@ public class KeywordUseCase implements UseCase<Keyword> {
 
     private final LocalService mLocalService;
     private final ApiService mApiService;
-    private int mId;
+    private int mId = 0;
 
     public KeywordUseCase(LocalService localService, ApiService apiService) {
         this.mLocalService = localService;

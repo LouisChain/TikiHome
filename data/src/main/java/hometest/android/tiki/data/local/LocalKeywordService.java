@@ -1,6 +1,9 @@
 package hometest.android.tiki.data.local;
 
+import com.raizlabs.android.dbflow.sql.language.SQLite;
+
 import hometest.android.tiki.data.local.model.LocalKeyword;
+import hometest.android.tiki.data.local.model.LocalKeyword_Table;
 import hometest.android.tiki.domain.converter.DomainConverter;
 import hometest.android.tiki.domain.model.Keyword;
 import hometest.android.tiki.domain.service.LocalService;
@@ -16,16 +19,19 @@ public class LocalKeywordService implements LocalService {
 
     @Override
     public Observable<Keyword> getKeywords(int id) {
-//        return Observable.fromCallable(() ->
-//                SQLite.select()
-//                        .from(LocalKeyword.class)
-//                        .where(LocalKeyword_Table.id.eq(id))
-//                        .querySingle());
-        return Observable.just(null);
+        return Observable.fromCallable(() ->
+                SQLite.select()
+                        .from(LocalKeyword.class)
+                        .where(LocalKeyword_Table.id.eq(id))
+                        .querySingle());
     }
 
     @Override
     public Observable<Void> saveKeywords(Keyword keyword) {
-        return Observable.just(null);
+        return Observable.fromCallable(() -> {
+            LocalKeyword localMovie = mKeywordConverter.convert(keyword);
+            localMovie.save();
+            return null;
+        });
     }
 }

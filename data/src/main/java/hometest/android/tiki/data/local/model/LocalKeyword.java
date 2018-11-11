@@ -28,6 +28,7 @@ public class LocalKeyword extends BaseModel implements Keyword {
 
     public LocalKeyword(int id, List<String> data) {
         this.id = id;
+        this.data = "";
         for (int i = 0; i < data.size(); i++) {
             this.data += data.get(i) + ",";
         }
