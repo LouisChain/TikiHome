@@ -7,9 +7,15 @@ import hometest.android.tiki.domain.usecase.KeywordUseCase;
 
 @Module
 public class HomeModule {
+//    @Provides
+//    @PerActivity
+//    public HomeViewModel provideHomeViewModel(KeywordUseCase keywordUseCase) {
+//        return new HomeViewModel(keywordUseCase);
+//    }
+
     @Provides
     @PerActivity
-    public HomeViewModel provideHomeViewModel(KeywordUseCase keywordUseCase) {
-        return new HomeViewModel(keywordUseCase);
+    public ListKeywordViewModel provideListKeywordViewModel(KeywordUseCase keywordUseCase) {
+        return new ListKeywordViewModel(keywordUseCase);
     }
 }

@@ -9,6 +9,10 @@ public class ApiKeyword implements Keyword {
 
     ArrayList<String> data;
 
+    public ApiKeyword(ArrayList<String> data) {
+        this.data = data;
+    }
+
     @Override
     public int getId() {
         return 0;

@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '27.0.3'
+//    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "hometest.android.tiki"
         minSdkVersion 15
@@ -36,6 +36,8 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    implementation 'com.android.support:recyclerview-v7:+'
+
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'

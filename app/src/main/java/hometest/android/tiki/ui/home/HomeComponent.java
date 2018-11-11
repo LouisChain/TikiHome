@@ -7,5 +7,6 @@ import hometest.android.tiki.di.PerActivity;
 @Subcomponent(modules = HomeModule.class)
 @PerActivity
 public interface HomeComponent {
-    HomeViewModel getHomeViewModel();
+//    HomeViewModel getHomeViewModel();
+    ListKeywordViewModel getListKeywordViewModel();
 }

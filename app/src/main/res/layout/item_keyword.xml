@@ -1,0 +1,29 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="hometest.android.tiki.ui.home.ItemKeywordViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_keyword"
+        bind:keywordBackground="@{viewModel.color}"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/normalSpacing"
+        android:layout_marginRight="@dimen/normalSpacing"
+        android:layout_height="wrap_content">
+
+        <hometest.android.tiki.widget.KeywordTextView
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/normalHeight"
+            android:textColor="#fff"
+            android:singleLine="false"
+            android:gravity="center|center_horizontal"
+            android:layout_height="@dimen/normalHeight"
+            android:text="@{viewModel.title}"/>
+    </LinearLayout>
+</layout>

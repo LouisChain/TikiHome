@@ -21,11 +21,11 @@ public class LocalKeywordService implements LocalService {
 //                        .from(LocalKeyword.class)
 //                        .where(LocalKeyword_Table.id.eq(id))
 //                        .querySingle());
-        return null;
+        return Observable.just(null);
     }
 
     @Override
     public Observable<Void> saveKeywords(Keyword keyword) {
-        return null;
+        return Observable.just(null);
     }
 }

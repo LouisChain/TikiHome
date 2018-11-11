@@ -12,6 +12,8 @@ import dagger.Module;
 import dagger.Provides;
 import hometest.android.tiki.data.api.HttpApiService;
 import hometest.android.tiki.data.api.KeywordApiService;
+import hometest.android.tiki.data.api.model.ApiKeyword;
+import hometest.android.tiki.data.api.model.gson.KeywordModelDeserializer;
 import hometest.android.tiki.data.local.LocalKeywordService;
 import hometest.android.tiki.data.local.converter.LocalKeywordConverter;
 import hometest.android.tiki.data.local.model.LocalKeyword;
@@ -66,7 +68,8 @@ public class DataModule {
     @Provides
     @Singleton
     public Gson provideGson() {
-        GsonBuilder gsonBuilder = new GsonBuilder();
+        GsonBuilder gsonBuilder = new GsonBuilder()
+                .registerTypeAdapter(ApiKeyword.class, new KeywordModelDeserializer());
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
         return gsonBuilder.create();
     }
