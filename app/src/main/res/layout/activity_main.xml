@@ -37,6 +37,12 @@
                 android:padding="@dimen/smallSpacing"
                 android:scrollbars="vertical"
                 bind:keyword="@{viewModel.keyword}" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cheer" />
         </LinearLayout>
 
         <include
