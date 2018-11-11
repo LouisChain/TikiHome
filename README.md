@@ -12,3 +12,7 @@ Got idea from [Android Clean Architecture](https://github.com/android10/Android-
 [Robolectric](http://robolectric.org/) for unit testing
 
 [RxJava and RxAndroid](https://github.com/ReactiveX/RxJava) for simplify the business logic
+
+## Concept
+
+![](https://github.com/LouisChain/TikiHome/blob/master/concept.jpg)
