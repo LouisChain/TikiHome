@@ -22,6 +22,7 @@
             android:minWidth="@dimen/normalHeight"
             android:textColor="#fff"
             android:singleLine="false"
+            android:maxLines="2"
             android:gravity="center|center_horizontal"
             android:layout_height="@dimen/normalHeight"
             android:text="@{viewModel.title}"/>

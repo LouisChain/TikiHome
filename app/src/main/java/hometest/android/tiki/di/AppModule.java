@@ -10,6 +10,7 @@ import dagger.Module;
 import dagger.Provides;
 import hometest.android.tiki.data.di.DataModule;
 import hometest.android.tiki.domain.di.DomainModule;
+import hometest.android.tiki.service.ToastUIService;
 
 @Module(includes = {DataModule.class, DomainModule.class})
 public class AppModule {
@@ -29,5 +30,11 @@ public class AppModule {
     @Singleton
     public Resources provideResource(Application app) {
         return app.getResources();
+    }
+
+    @Singleton
+    @Provides
+    public ToastUIService provideToastUIService(Context context) {
+        return new ToastUIService(context);
     }
 }

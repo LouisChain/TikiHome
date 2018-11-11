@@ -6,7 +6,6 @@ import java.util.List;
 import hometest.android.tiki.domain.model.Keyword;
 
 public class ApiKeyword implements Keyword {
-
     ArrayList<String> data;
 
     public ApiKeyword(ArrayList<String> data) {

@@ -8,6 +8,5 @@ import hometest.android.tiki.domain.service.ApiService;
 @Singleton
 @Component(modules = DataModule.class)
 public interface DataComponent {
-
     ApiService getApiService();
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">TikiHome</string>
     <string name="title_keyword">Từ khóa hot</string>
+
+    <string name="network_error">Có vấn đề về mạng. Vui lòng kiểm tra lại kết nối</string>
+    <string name="empty_item">Không có dữ liệu. Vui lòng kiểm tra lại kết nối và tải lại</string>
+    <string name="refresh">Tải lại</string>
 </resources>

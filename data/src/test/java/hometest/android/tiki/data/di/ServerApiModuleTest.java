@@ -23,7 +23,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class ServerApiModuleTest {
-
     @Singleton
     @Provides
     public MockWebServer provideMockWebServer() {

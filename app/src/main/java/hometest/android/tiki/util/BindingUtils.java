@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import hometest.android.tiki.domain.model.Keyword;
@@ -49,4 +50,14 @@ public class BindingUtils {
 
         layout.setBackgroundDrawable(background);
     }
+
+    @BindingAdapter("bind:visibility")
+    public static void setVisibility(View view, boolean visible) {
+        if (visible) {
+            view.setVisibility(View.VISIBLE);
+        } else {
+            view.setVisibility(View.GONE);
+        }
+    }
+
 }

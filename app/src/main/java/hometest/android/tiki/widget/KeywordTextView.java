@@ -26,23 +26,28 @@ public class KeywordTextView extends android.support.v7.widget.AppCompatTextView
         mContext = context;
     }
 
+    private CharSequence breakLines(CharSequence text) {
+        StringBuilder formatText = new StringBuilder(text);
+        String[] s = text.toString().trim().split(" ");
+        if (s.length >= 2) {
+            formatText = new StringBuilder();
+            for (int i = 0; i < s.length / 2; i++) {
+                formatText.append(s[i]);
+                formatText.append(" ");
+            }
+            formatText.append("\n");
+            for (int i = s.length / 2; i < s.length; i++) {
+                formatText.append(s[i]);
+                formatText.append(" ");
+            }
+            formatText.subSequence(0, formatText.length() - 1);
+        }
+        return formatText;
+    }
+
     @Override
     public void setText(CharSequence text, BufferType type) {
-        setMaxLines(2);
-        String formatText = text.toString();
-        String s = text.toString().trim();
-        String[] ss = s.split(" ");
-        if (ss != null && ss.length >= 2) {
-            formatText = "";
-            for (int i = 0; i < ss.length / 2; i++) {
-                formatText += ss[i] + " ";
-            }
-            formatText += "\n";
-            for (int i = ss.length / 2; i < ss.length; i++) {
-                formatText += ss[i] + " ";
-            }
-        }
-
+        CharSequence formatText = breakLines(text);
         super.setText(formatText, type);
     }
 }

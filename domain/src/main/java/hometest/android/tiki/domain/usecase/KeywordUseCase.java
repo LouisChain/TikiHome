@@ -6,7 +6,6 @@ import hometest.android.tiki.domain.service.LocalService;
 import rx.Observable;
 
 public class KeywordUseCase implements UseCase<Keyword> {
-
     private final LocalService mLocalService;
     private final ApiService mApiService;
     private int mId = 0;

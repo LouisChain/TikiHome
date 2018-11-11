@@ -6,7 +6,6 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
 public class TestPolicy {
-
     @Implements(NetworkSecurityPolicy.class)
     public static class MyNetworkSecurityPolicy {
         @Implementation

@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/tools">
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="viewModel"
             type="hometest.android.tiki.ui.home.ListKeywordViewModel" />
+
+        <import type="android.view.View" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/normalSpacing"
-            android:layout_height="wrap_content">
+            bind:visibility="@{(!viewModel.refresh &amp;&amp; !viewModel.progress)}">
 
             <TextView
-                android:textColor="@color/textDefaultColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title_keyword"
+                android:textColor="@color/textDefaultColor"
                 android:textSize="@dimen/titleTextSize" />
 
             <android.support.v7.widget.RecyclerView
@@ -34,5 +38,18 @@
                 android:scrollbars="vertical"
                 bind:keyword="@{viewModel.keyword}" />
         </LinearLayout>
+
+        <include
+            android:id="@+id/layout_refresh"
+            layout="@layout/empty_refresh_layout"
+            android:visibility="@{viewModel.refresh ? View.VISIBLE : View.GONE}" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            bind:visibility="@{viewModel.progress}" />
     </LinearLayout>
 </layout>

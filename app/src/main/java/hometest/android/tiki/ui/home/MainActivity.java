@@ -3,7 +3,7 @@ package hometest.android.tiki.ui.home;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import hometest.android.tiki.R;
 import hometest.android.tiki.databinding.ActivityMainBinding;
@@ -20,6 +20,12 @@ public class MainActivity extends BaseActivity {
         mListKeywordViewModel = getAppComponent().plus(new HomeModule()).getListKeywordViewModel();
         mBinding.setViewModel(mListKeywordViewModel);
         setupRecyclerView(mBinding);
+        mBinding.layoutRefresh.buttonRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mListKeywordViewModel.loadKeyword();
+            }
+        });
     }
 
     private void setupRecyclerView(ActivityMainBinding binding) {

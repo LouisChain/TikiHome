@@ -6,7 +6,6 @@ import hometest.android.tiki.data.api.response.KeywordApiResponse;
 import rx.Observable;
 
 public class KeywordApiTransformer<T> implements Observable.Transformer<KeywordApiResponse<T>, T> {
-
     @Override
     public Observable<T> call(Observable<KeywordApiResponse<T>> keywordApiTransformerObservable) {
         return keywordApiTransformerObservable.flatMap(tResponse -> {

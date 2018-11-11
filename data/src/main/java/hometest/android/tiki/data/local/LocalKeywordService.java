@@ -10,7 +10,6 @@ import hometest.android.tiki.domain.service.LocalService;
 import rx.Observable;
 
 public class LocalKeywordService implements LocalService {
-
     final DomainConverter<Keyword, LocalKeyword> mKeywordConverter;
 
     public LocalKeywordService(DomainConverter keywordConverter) {
