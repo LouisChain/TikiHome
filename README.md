@@ -13,6 +13,8 @@ Got idea from [Android Clean Architecture](https://github.com/android10/Android-
 
 [RxJava and RxAndroid](https://github.com/ReactiveX/RxJava) for simplify the business logic
 
+In each layer also implement test
+
 ## Concept
 
 ![](https://github.com/LouisChain/TikiHome/blob/master/concept.jpg)
