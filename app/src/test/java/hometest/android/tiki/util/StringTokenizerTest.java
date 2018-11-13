@@ -1,13 +1,14 @@
 package hometest.android.tiki.util;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class StringTokenizerTest {
     @Test
     public void testWordEmpty() {
         String paragraph = null;
-        String [] words = WordTokenizer.tokenize(paragraph);
+        String[] words = WordTokenizer.tokenize(paragraph);
         assertEquals(0, words.length);
     }
 
@@ -33,5 +34,22 @@ public class StringTokenizerTest {
         String[] words = WordTokenizer.tokenize(paragraph);
         assertEquals(7, words.length);
         assertEquals("xuân", words[4]);
+    }
+
+    @Test
+    public void testBreakIntoTwoLines() {
+        String test = "Anh chinh la thanh xuan cua em la la la ??; la   k";
+        CharSequence actual = WordTokenizer.breakLines(test);
+        String[] splt = actual.toString().split("\n");
+        assertEquals(2, splt.length);
+
+        String[] token1 = WordTokenizer.tokenize(splt[0]);
+        String[] token2 = WordTokenizer.tokenize(splt[1]);
+        if (token1.length < token2.length) {
+            assertEquals(token1.length + 1, token2.length);
+        }
+        if (token1.length > token2.length) {
+            assertEquals(token1.length, token2.length + 1);
+        }
     }
 }

@@ -7,30 +7,51 @@
     <color name="textDefaultColor">#000000</color>
     <color name="background1">#000</color>
 
-    <integer-array name="randomColors">
-        <item>#FF33B5E5</item>
-        <item>#FFAA66CC</item>
-        <item>#FF99CC00</item>
-        <item>#FFFFBB33</item>
-        <item>#FFFF4444</item>
-        <item>#FF0099CC</item>
-        <item>#FF9933CC</item>
-        <item>#FFFF8800</item>
-        <item>#FFCC0000</item>
-        <item>#FF9933CC</item>
-        <item>#FF669900</item>
-        <item>#ff66c1</item>
-        <item>#8187ff</item>
-        <item>#f2de15</item>
-        <item>#cdc2ae</item>
-        <item>#252228</item>
-        <item>#f2de15</item>
-        <item>#ff66c1</item>
-        <item>#3b5998</item>
-        <item>#6666c1</item>
-        <item>#ba7958</item>
-        <item>#330066</item>
-    </integer-array>
+    <item name="c1" type="color">#FF33B5E5</item>
+    <item name="c2" type="color">#FFAA66CC</item>
+    <item name="c3" type="color">#FF99CC00</item>
+    <item name="c4" type="color">#FFFFBB33</item>
+    <item name="c5" type="color">#FFFF4444</item>
+    <item name="c6" type="color">#FF0099CC</item>
+    <item name="c7" type="color">#FF9933CC</item>
+    <item name="c8" type="color">#FFFF8800</item>
+    <item name="c9" type="color">#FFCC0000</item>
+    <item name="c10" type="color">#FF9933CC</item>
+    <item name="c11" type="color">#FF669900</item>
+    <item name="c12" type="color">#ff66c1</item>
+    <item name="c13" type="color">#8187ff</item>
+    <item name="c14" type="color">#f2de15</item>
+    <item name="c15" type="color">#cdc2ae</item>
+    <item name="c16" type="color">#252228</item>
+    <item name="c17" type="color">#f2de15</item>
+    <item name="c18" type="color">#ff66c1</item>
+    <item name="c19" type="color">#3b5998</item>
+    <item name="c20" type="color">#330066</item>
+    <item name="c21" type="color">#ba7958</item>
 
+
+    <integer-array name="randomColors">
+        <item>@color/c1</item>
+        <item>@color/c2</item>
+        <item>@color/c3</item>
+        <item>@color/c4</item>
+        <item>@color/c5</item>
+        <item>@color/c6</item>
+        <item>@color/c7</item>
+        <item>@color/c8</item>
+        <item>@color/c9</item>
+        <item>@color/c10</item>
+        <item>@color/c11</item>
+        <item>@color/c12</item>
+        <item>@color/c13</item>
+        <item>@color/c14</item>
+        <item>@color/c15</item>
+        <item>@color/c16</item>
+        <item>@color/c17</item>
+        <item>@color/c18</item>
+        <item>@color/c19</item>
+        <item>@color/c20</item>
+        <item>@color/c21</item>
+    </integer-array>
 
 </resources>
