@@ -2,6 +2,8 @@ package hometest.android.tiki;
 
 import org.junit.Test;
 
+import java.util.LinkedList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,5 +15,15 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void linkedList() {
+
+    }
+
+    class Node {
+        int data;
+        Node next;
     }
 }

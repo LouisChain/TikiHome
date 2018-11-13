@@ -3,6 +3,8 @@ package hometest.android.tiki.widget;
 import android.content.Context;
 import android.util.AttributeSet;
 
+import hometest.android.tiki.util.WordTokenizer;
+
 public class KeywordTextView extends android.support.v7.widget.AppCompatTextView {
 
     private Context mContext;
@@ -28,7 +30,7 @@ public class KeywordTextView extends android.support.v7.widget.AppCompatTextView
 
     private CharSequence breakLines(CharSequence text) {
         StringBuilder formatText = new StringBuilder(text);
-        String[] s = text.toString().trim().split(" ");
+        String[] s = WordTokenizer.tokenize(text);
         if (s.length >= 2) {
             formatText = new StringBuilder();
             for (int i = 0; i < s.length / 2; i++) {

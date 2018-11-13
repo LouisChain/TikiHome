@@ -6,4 +6,31 @@
 
     <color name="textDefaultColor">#000000</color>
     <color name="background1">#000</color>
+
+    <integer-array name="randomColors">
+        <item>#FF33B5E5</item>
+        <item>#FFAA66CC</item>
+        <item>#FF99CC00</item>
+        <item>#FFFFBB33</item>
+        <item>#FFFF4444</item>
+        <item>#FF0099CC</item>
+        <item>#FF9933CC</item>
+        <item>#FFFF8800</item>
+        <item>#FFCC0000</item>
+        <item>#FF9933CC</item>
+        <item>#FF669900</item>
+        <item>#ff66c1</item>
+        <item>#8187ff</item>
+        <item>#f2de15</item>
+        <item>#cdc2ae</item>
+        <item>#252228</item>
+        <item>#f2de15</item>
+        <item>#ff66c1</item>
+        <item>#3b5998</item>
+        <item>#6666c1</item>
+        <item>#ba7958</item>
+        <item>#330066</item>
+    </integer-array>
+
+
 </resources>

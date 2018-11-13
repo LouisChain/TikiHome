@@ -4,9 +4,10 @@ import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
-import android.graphics.Color;
 
 import java.util.Random;
+
+import hometest.android.tiki.R;
 
 public class ItemKeywordViewModel extends BaseObservable {
     public final ObservableField<String> title = new ObservableField<>();
@@ -18,9 +19,13 @@ public class ItemKeywordViewModel extends BaseObservable {
     public ItemKeywordViewModel(Context context, String keyword) {
         mContext = context;
         mKeyword = keyword;
-        Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        this.color.set(color);
+        setRandomColorBackground();
+    }
+
+    private void setRandomColorBackground() {
+        int[] androidColors = mContext.getResources().getIntArray(R.array.randomColors);
+        int randomAndroidColor = androidColors[new Random().nextInt(androidColors.length)];
+        this.color.set(randomAndroidColor);
     }
 
     public void bind() {
