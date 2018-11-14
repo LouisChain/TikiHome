@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class StringTokenizerTest {
+public class WordTokenizerTest {
     @Test
     public void testWordEmpty() {
         String paragraph = null;
@@ -38,7 +38,7 @@ public class StringTokenizerTest {
 
     @Test
     public void testBreakIntoTwoLines() {
-        String test = "Anh chinh la thanh xuan cua em la la la ??; la   k";
+        String test = "Anh chinh la thanh xuan cua em la la la ??; la   k-al";
         CharSequence actual = WordTokenizer.breakLines(test);
         String[] splt = actual.toString().split("\n");
         assertEquals(2, splt.length);
